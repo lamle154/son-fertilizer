@@ -1,11 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { Collapsible as CollapsiblePrimitive } from 'radix-ui';
-import { AnimatePresence, motion, type HTMLMotionProps } from 'motion/react';
 
-import { getStrictContext } from '@/lib/get-strict-context';
+import { AnimatePresence, motion, type HTMLMotionProps } from 'motion/react';
+import { Collapsible as CollapsiblePrimitive } from 'radix-ui';
+
 import { useControlledState } from '@/hooks/use-controlled-state';
+import { getStrictContext } from '@/lib/get-strict-context';
 
 type CollapsibleContextType = {
   isOpen: boolean;
@@ -26,23 +27,15 @@ function Collapsible(props: CollapsibleProps) {
 
   return (
     <CollapsibleProvider value={{ isOpen, setIsOpen }}>
-      <CollapsiblePrimitive.Root
-        data-slot="collapsible"
-        {...props}
-        onOpenChange={setIsOpen}
-      />
+      <CollapsiblePrimitive.Root data-slot="collapsible" {...props} onOpenChange={setIsOpen} />
     </CollapsibleProvider>
   );
 }
 
-type CollapsibleTriggerProps = React.ComponentProps<
-  typeof CollapsiblePrimitive.Trigger
->;
+type CollapsibleTriggerProps = React.ComponentProps<typeof CollapsiblePrimitive.Trigger>;
 
 function CollapsibleTrigger(props: CollapsibleTriggerProps) {
-  return (
-    <CollapsiblePrimitive.Trigger data-slot="collapsible-trigger" {...props} />
-  );
+  return <CollapsiblePrimitive.Trigger data-slot="collapsible-trigger" {...props} />;
 }
 
 type CollapsibleContentProps = Omit<
@@ -65,16 +58,16 @@ function CollapsibleContent({
       {keepRendered ? (
         <CollapsiblePrimitive.Content asChild forceMount>
           <motion.div
-            key="collapsible-content"
-            data-slot="collapsible-content"
-            layout
-            initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
             animate={
               isOpen
                 ? { opacity: 1, height: 'auto', overflow: 'hidden' }
                 : { opacity: 0, height: 0, overflow: 'hidden' }
             }
+            data-slot="collapsible-content"
+            initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
+            key="collapsible-content"
             transition={transition}
+            layout
             {...props}
           />
         </CollapsiblePrimitive.Content>
@@ -82,13 +75,13 @@ function CollapsibleContent({
         isOpen && (
           <CollapsiblePrimitive.Content asChild forceMount>
             <motion.div
-              key="collapsible-content"
-              data-slot="collapsible-content"
-              layout
-              initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
               animate={{ opacity: 1, height: 'auto', overflow: 'hidden' }}
+              data-slot="collapsible-content"
               exit={{ opacity: 0, height: 0, overflow: 'hidden' }}
+              initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
+              key="collapsible-content"
               transition={transition}
+              layout
               {...props}
             />
           </CollapsiblePrimitive.Content>

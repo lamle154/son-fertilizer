@@ -1,24 +1,13 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/animate-ui/components/animate/tooltip';
-import { Button } from '@/components/ui/button';
+import { useEffect } from 'react';
+
+import { useNavigate } from 'react-router';
 
 export const Home = () => {
-  return (
-    <TooltipProvider openDelay={0}>
-      <Tooltip side='right' align='center'>
-        <TooltipTrigger asChild>
-          <Button>
-            <span>Tooltip</span>
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Tooltip content</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/orders');
+  }, []);
+
+  return <p>Dashboard</p>;
 };

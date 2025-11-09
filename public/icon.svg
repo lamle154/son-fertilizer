@@ -1,6 +1,109 @@
 <svg data-v-0dd9719b="" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     width="100%" height="100%" viewBox="0 0 120.000000 110.000000" preserveAspectRatio="xMidYMid meet"
     color-interpolation-filters="sRGB" style="margin: auto;">
+    <defs>
+        <style>
+            @keyframes fillPulse {
+
+                0%,
+                100% {
+                    fill: #ffbd4a;
+                }
+
+                50% {
+                    fill: #ffc107;
+                }
+            }
+
+            @keyframes fillPulseGreen {
+
+                0%,
+                100% {
+                    fill: #689f38;
+                }
+
+                50% {
+                    fill: #9ccc65;
+                }
+            }
+
+            @keyframes opacityPulse {
+
+                0%,
+                100% {
+                    opacity: 0.6;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            .sun-path {
+                animation: fillPulse 1.5s ease-in-out infinite;
+            }
+
+            .sun-ray {
+                animation: fillPulse 1.2s ease-in-out infinite, opacityPulse 1.2s ease-in-out infinite;
+            }
+
+            .sun-ray-0 {
+                animation-delay: 0s;
+            }
+
+            .sun-ray-1 {
+                animation-delay: 0.1s;
+            }
+
+            .sun-ray-2 {
+                animation-delay: 0.2s;
+            }
+
+            .sun-ray-3 {
+                animation-delay: 0.3s;
+            }
+
+            .sun-ray-4 {
+                animation-delay: 0.4s;
+            }
+
+            .sun-ray-5 {
+                animation-delay: 0.5s;
+            }
+
+            .sun-ray-6 {
+                animation-delay: 0.6s;
+            }
+
+            .sun-ray-7 {
+                animation-delay: 0.7s;
+            }
+
+            .plant-path-0 {
+                animation: fillPulseGreen 2s ease-in-out infinite;
+            }
+
+            .plant-path-1 {
+                animation: fillPulseGreen 2s ease-in-out infinite;
+                animation-delay: 0.25s;
+            }
+
+            .plant-path-2 {
+                animation: fillPulseGreen 2s ease-in-out infinite;
+                animation-delay: 0.5s;
+            }
+
+            .plant-path-3 {
+                animation: fillPulseGreen 2s ease-in-out infinite;
+                animation-delay: 0.75s;
+            }
+
+            .plant-path-4 {
+                animation: fillPulseGreen 2s ease-in-out infinite;
+                animation-delay: 1s;
+            }
+        </style>
+    </defs>
     <g data-v-0dd9719b="" class="icon-text-wrapper icon-svg-group iconsvg" transform="translate(5,5)">
         <g class="iconsvg-imagesvg" fill="#8D6E63" transform="translate(24.638301849365234,0)">
             <g>
@@ -16,24 +119,28 @@
                                 d="M558.77,658.1l-14.2-14.08c44.38-44.76,64.87-101.02,57.68-158.43l19.85-2.48C630.06,546.74,607.57,608.88,558.77,658.1z">
                             </path>
                             <g>
-                                <path fill="#FFBD4A"
+                                <path class="sun-path" fill="#FFBD4A"
                                     d="M856.53,228.46c0,33.58-27.32,60.9-60.91,60.9c-33.58,0-60.9-27.32-60.9-60.9s27.32-60.91,60.9-60.91    C829.21,167.55,856.53,194.88,856.53,228.46z">
                                 </path>
                             </g>
-                            <rect fill="#FFBD4A" x="785.62" y="117.75" width="20" height="25.9"></rect>
-                            <rect fill="#FFBD4A" x="785.62" y="313.26" width="20" height="25.9"></rect>
-                            <rect fill="#FFBD4A" x="880.43" y="218.46" width="25.9" height="20"></rect>
-                            <rect fill="#FFBD4A" x="684.92" y="218.46" width="25.9" height="20"></rect>
-                            <rect fill="#FFBD4A" x="851.8" y="149.33"
+                            <rect class="sun-ray sun-ray-0" fill="#FFBD4A" opacity="0.6" x="785.62" y="117.75"
+                                width="20" height="25.9"></rect>
+                            <rect class="sun-ray sun-ray-1" fill="#FFBD4A" opacity="0.6" x="785.62" y="313.26"
+                                width="20" height="25.9"></rect>
+                            <rect class="sun-ray sun-ray-2" fill="#FFBD4A" opacity="0.6" x="880.43" y="218.46"
+                                width="25.9" height="20"></rect>
+                            <rect class="sun-ray sun-ray-3" fill="#FFBD4A" opacity="0.6" x="684.92" y="218.46"
+                                width="25.9" height="20"></rect>
+                            <rect class="sun-ray sun-ray-4" fill="#FFBD4A" opacity="0.6" x="851.8" y="149.33"
                                 transform="matrix(0.7071 -0.7071 0.7071 0.7071 140.6119 658.137)" width="25.9"
                                 height="20"></rect>
-                            <rect fill="#FFBD4A" x="713.55" y="287.58"
+                            <rect class="sun-ray sun-ray-5" fill="#FFBD4A" opacity="0.6" x="713.55" y="287.58"
                                 transform="matrix(0.7071 -0.7071 0.7071 0.7071 2.3638 600.8728)" width="25.9"
                                 height="20"></rect>
-                            <rect fill="#FFBD4A" x="716.5" y="146.38"
+                            <rect class="sun-ray sun-ray-6" fill="#FFBD4A" opacity="0.6" x="716.5" y="146.38"
                                 transform="matrix(0.7071 -0.7071 0.7071 0.7071 100.1093 560.3641)" width="20"
                                 height="25.9"></rect>
-                            <rect fill="#FFBD4A" x="854.75" y="284.63"
+                            <rect class="sun-ray sun-ray-7" fill="#FFBD4A" opacity="0.6" x="854.75" y="284.63"
                                 transform="matrix(0.7071 -0.7071 0.7071 0.7071 42.845 698.607)" width="20"
                                 height="25.9"></rect>
                             <path
@@ -63,19 +170,19 @@
                             <rect x="269.62" y="331.41"
                                 transform="matrix(0.5403 -0.8415 0.8415 0.5403 -156.873 391.2334)" width="20"
                                 height="15.55"></rect>
-                            <path fill="#689F38"
+                            <path class="plant-path-0" fill="#689F38"
                                 d="M402.83,777.43c-3.74,0-7.48-0.23-11.19-0.71c-3.44-0.45-6.4-2.64-7.83-5.8c-11.73-25.98-5.34-61.16,15.9-87.54   c19.96-24.79,50.76-39.5,82.57-39.5c0.37,0,0.74,0,1.11,0.01c4.6,0.05,8.58,3.23,9.63,7.71c8.31,35.39,1.58,69.26-18.45,92.95   C457.12,765.18,429.88,777.43,402.83,777.43z M400.05,757.38c22.18,0.93,44.92-8.81,59.25-25.75   c14.43-17.06,20.04-41.3,15.84-67.43c-23.01,2.05-45.39,13.77-59.85,31.73C400.13,714.74,394.37,738.69,400.05,757.38z">
                             </path>
-                            <path fill="#689F38"
+                            <path class="plant-path-1" fill="#689F38"
                                 d="M386.5,725.98c-0.03,0-0.06,0-0.09,0c-30.76-0.27-61.28-17.23-77.75-43.22c-16.6-26.2-18.63-60.68-5.55-94.6   c1.66-4.29,6.04-6.91,10.59-6.32c31.95,4.06,60.91,22.97,77.49,50.58c17.43,29.04,18.95,64.76,3.77,88.89   C393.14,724.22,389.94,725.98,386.5,725.98z M319.11,603.09c-7.74,25.31-5.5,50.09,6.46,68.97c11.88,18.75,33.07,31.51,55.17,33.62   c8.19-17.74,5.75-42.25-6.68-62.97C362.18,622.95,341.62,608.27,319.11,603.09z">
                             </path>
-                            <path fill="#689F38"
+                            <path class="plant-path-2" fill="#689F38"
                                 d="M397.88,811.64l-20-0.02c0.04-51.75,0.04-100.96,0.04-100.96h20C397.92,710.67,397.92,759.89,397.88,811.64z">
                             </path>
-                            <path fill="#689F38"
+                            <path class="plant-path-3" fill="#689F38"
                                 d="M406.28,768.8l-19.14-5.8c4.79-15.81,16.27-27.96,27.96-38.74c1.1-1.01,2.21-2.03,3.32-3.04   c9.22-8.43,17.94-16.39,23.13-26.24l17.69,9.32c-6.81,12.93-17.24,22.46-27.33,31.68c-1.09,0.99-2.17,1.99-3.25,2.98   C419.7,747.22,409.85,757.01,406.28,768.8z">
                             </path>
-                            <path fill="#689F38"
+                            <path class="plant-path-4" fill="#689F38"
                                 d="M371.18,715.42c-1.16-11.76-8.95-22.51-16.43-31.48c-1.65-1.98-3.33-3.94-5.02-5.9c-7.8-9.08-15.86-18.47-21.15-30.13   l18.21-8.26c4.11,9.06,10.91,16.98,18.11,25.36c1.75,2.04,3.5,4.08,5.21,6.13c8.87,10.64,19.26,25.07,20.96,42.32L371.18,715.42z">
                             </path>
                             <rect x="120.34" y="153.98" width="86.5" height="20"></rect>

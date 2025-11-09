@@ -1,0 +1,62 @@
+CREATE TABLE categories (
+    id VARCHAR(50) PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL UNIQUE,
+    detail TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE products (
+  id VARCHAR(50) PRIMARY KEY NOT NULL,
+  name TEXT NOT NULL,
+  category_id VARCHAR(50) NOT NULL,
+  selling_price REAL NOT NULL,
+  unit TEXT NOT NULL,
+  imageUrl TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE customers (
+  id VARCHAR(50) PRIMARY KEY NOT NULL,
+  name TEXT NOT NULL,
+  phone_number TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE stock_ins (
+  id VARCHAR(50) PRIMARY KEY NOT NULL,
+  product_id VARCHAR(50) NOT NULL,
+  import_date DATE NOT NULL,
+  stock_in_price REAL NOT NULL,
+  quantity INTEGER NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE orders (
+  id VARCHAR(50) PRIMARY KEY NOT NULL,
+  order_date DATE NOT NULL,
+  customer_id VARCHAR(50) NOT NULL,
+  total_amount REAL NOT NULL,
+  payment_type TEXT NOT NULL,
+  payment_status TEXT NOT NULL,
+  paid_amount REAL DEFAULT 0,
+  debt_amount REAL DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+CREATE TABLE order_items (
+  id VARCHAR(50) PRIMARY KEY NOT NULL,
+  order_id VARCHAR(50) NOT NULL,
+  product_id VARCHAR(50) NOT NULL,
+  quantity INTEGER NOT NULL,
+  unit_price REAL NOT NULL,
+  total_price REAL NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  FOREIGN KEY (order_id) REFERENCES orders(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);

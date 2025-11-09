@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as motion from 'motion/react-client';
 
 import {
@@ -45,10 +46,7 @@ function TooltipContent({
 }: TooltipContentProps) {
   return (
     <TooltipContentPrimitive
-      className={cn(
-        'z-50 w-fit bg-primary text-primary-foreground rounded-md',
-        className,
-      )}
+      className={cn('z-50 w-fit bg-primary text-primary-foreground rounded-md', className)}
       {...props}
     >
       <motion.div className="overflow-hidden px-3 py-1.5 text-xs text-balance">
